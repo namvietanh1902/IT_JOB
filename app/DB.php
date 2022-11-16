@@ -4,31 +4,19 @@ declare(strict_types = 1);
 
 namespace App;
 
-use PDO;
+use mysqli;
 
-/**
- * @mixin PDO
- */
 class DB
 {
-    private PDO $pdo;
+    private mysqli $db;
 
-    public function __construct(array $config)
+    public function __construct()
     {
-        $defaultOptions = [
-            PDO::ATTR_EMULATE_PREPARES   => false,
-            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-        ];
 
         try {
-            $this->pdo = new PDO(
-                $config['driver'] . ':host=' . $config['host'] . ';dbname=' . $config['database'],
-                $config['user'],
-                $config['pass'],
-                $config['options'] ?? $defaultOptions
-            );
-        } catch (\PDOException $e) {
-            throw new \PDOException($e->getMessage(), (int) $e->getCode());
+            $this->db = mysqli_connect('localhost','root','','IT_JOB');
+        } catch (\Exception $e) {
+           
         }
     }
 

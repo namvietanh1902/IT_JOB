@@ -22,7 +22,7 @@ class View
     public function render(): string
     {
         $viewPath = "views/IT_JOB" . '/' . $this->view . '.php';
-        echo $viewPath;
+       
         if (! file_exists($viewPath)) {
             throw new ViewNotFoundException();
         }

@@ -9,10 +9,8 @@ class HomeController
 {
     public function index(): View
     {
-        return View::make('Homepage/index');
+        $data="Alo";
+        return View::make('Homepage/index',compact('data'));
     }
-    public function login(): View
-    {
-        return View::make('Login/index');
-    }
+    
 }

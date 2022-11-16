@@ -38,7 +38,7 @@ class Router
         $route = explode('?', $requestUri)[0];
         
         $action = $this->routes[$requestMethod][$route] ?? null;
-        var_dump($this->routes, $action, $route);
+       
 
         if (! $action) {
             throw new RouteNotFoundException();

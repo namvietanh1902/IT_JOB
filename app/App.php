@@ -10,9 +10,9 @@ class App
 {
     private static DB $db;
 
-    public function __construct(protected Router $router, protected array $request, protected Config $config)
+    public function __construct(protected Router $router, protected array $request)
     {
-        static::$db = new DB($config->db ?? []);
+        static::$db = new DB();
     }
 
     public static function db(): DB
