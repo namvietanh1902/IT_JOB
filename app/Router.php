@@ -1,5 +1,4 @@
 <?php
-
 declare(strict_types=1);
 
 namespace App;
@@ -10,7 +9,7 @@ class Router
 {
     private array $routes;
 
-    public function register(string $requestMethod, string $route, callable|array $action): self
+    public function register(string $requestMethod, string $route, array $action): self
     {   
         $route = "/IT_JOB".$route;
         $this->routes[$requestMethod][$route] = $action;
@@ -18,12 +17,12 @@ class Router
         return $this;
     }
 
-    public function get(string $route, callable|array $action): self
+    public function get(string $route, array $action): self
     {
         return $this->register('get', $route, $action);
     }
 
-    public function post(string $route, callable|array $action): self
+    public function post(string $route, array $action): self
     {
         return $this->register('post', $route, $action);
     }
@@ -44,9 +43,9 @@ class Router
             throw new RouteNotFoundException();
         }
 
-        if (is_callable($action)) {
-            return call_user_func($action);
-        }
+        // if (is_callable($action)) {
+        //     return call_user_func($action);
+        // }
 
         if (is_array($action)) {
             [$class, $method] = $action;
