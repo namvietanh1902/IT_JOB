@@ -132,6 +132,15 @@
   margin-bottom: 20px;
   padding-left: 12px;
 }
+.login-fail{
+  width: 300px;
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  padding-left: 12px;
+  color: #ea1e30;
+}
 
 .login-password {
   position: relative;

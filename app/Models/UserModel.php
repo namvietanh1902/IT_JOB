@@ -1,6 +1,8 @@
 <?php
+declare(strict_types = 1);
+namespace App\Models;
 class UserModel{
-    private int $id;
+    private string $id;
     private string $email;
     private string $password;
     private string $name;

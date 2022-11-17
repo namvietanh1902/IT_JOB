@@ -12,13 +12,9 @@ class App
 
     public function __construct(protected Router $router, protected array $request)
     {
-        static::$db = new DB();
+        
     }
 
-    public static function db(): DB
-    {
-        return static::$db;
-    }
 
     public function run()
     {
