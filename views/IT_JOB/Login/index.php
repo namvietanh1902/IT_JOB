@@ -53,9 +53,9 @@
             </div>
             <input class="login-input" name="password" type="text" placeholder="Password" />
             <i class="show-icon fa-regular fa-eye"></i>
-            <?php if (isset($error)): ?>
-                <div class = "login-fail"><?php echo $error;?> </div>
-            <?php endif; ?>
+            <div class= "login-fail"> 
+            <?php if (isset($error)) echo $error; ?>
+            </div>
           </div>
           <input type="submit" class="btn-submit" value="Login" onClick="" />
         </form>
