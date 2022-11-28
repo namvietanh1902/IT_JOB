@@ -8,7 +8,6 @@ use App\Exceptions\RouteNotFoundException;
 
 class App
 {
-    private static DB $db;
 
     public function __construct(protected Router $router, protected array $request)
     {

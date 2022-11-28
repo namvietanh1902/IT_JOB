@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="views/IT_JOB/SearchJob/style.css" />
     <script
       src="https://kit.fontawesome.com/a8df01a584.js"
       crossorigin="anonymous"
@@ -15,10 +15,10 @@
     <header>
       <div class="header">
         <nav class="header-left">
-          <a href="../Homepage/index.html">
+          <a href="./">
             <img
               class="header-logo"
-              src="../img/logo-itviec-4492a2f2577a15a0a1d55444c21c0fa55810822b3b189fc689b450fb62ce0b5b.png"
+              src="img/logo-itviec-4492a2f2577a15a0a1d55444c21c0fa55810822b3b189fc689b450fb62ce0b5b.png"
               alt="logo"
             />
           </a>
@@ -27,6 +27,7 @@
             <li class="nav-item">Việc Làm IT</li>
             <li class="nav-item">Top Công ty IT</li>
             <li class="nav-item">Blog</li>
+            <li class="nav-item"><?php echo $_SESSION['user']; ?></li>
             <!-- <li class="nav-item">Chuyện IT</li> -->
           </ul>
         </nav>
@@ -98,7 +99,7 @@
               <ul class="list-recruit">
                 <li class="recruit-item">
                   <div class="recruit-logo">
-                    <img src="../../img/logo FSOFT dọc.webp " alt="" />
+                    <img src="img/logo FSOFT dọc.webp " alt="" />
                   </div>
                   <div class="recruit-description">
                     <h4 class="recruit-name">
@@ -125,7 +126,7 @@
                 </li>
                 <li class="recruit-item">
                   <div class="recruit-logo">
-                    <img src="../../img/logo FSOFT dọc.webp" alt="" />
+                    <img src="img/logo FSOFT dọc.webp" alt="" />
                   </div>
                   <div class="recruit-description">
                     <h4 class="recruit-name">
@@ -152,7 +153,7 @@
                 </li>
                 <li class="recruit-item">
                   <div class="recruit-logo">
-                    <img src="../../img/logo FSOFT dọc.webp" alt="" />
+                    <img src="img/logo FSOFT dọc.webp" alt="" />
                   </div>
                   <div class="recruit-description">
                     <h4 class="recruit-name">
@@ -453,7 +454,7 @@
 
             <div class="preview-footer">
               <div class="preview-company__header">
-                <img src="../../img/logo FSOFT dọc.webp" alt="" />
+                <img src="img/logo FSOFT dọc.webp" alt="" />
                 <h4>FPT Software</h4>
               </div>
               <ul class="preview-company__description">
@@ -470,7 +471,7 @@
                   <span>Thứ 2 - Thứ 6</span>
                 </li>
                 <li class="description-item">
-                  <img src="../../img/vn.png" alt="" />
+                  <img src="img/vn.png" alt="" />
                   <span>Vietnam</span>
                 </li>
                 <li class="description-item">

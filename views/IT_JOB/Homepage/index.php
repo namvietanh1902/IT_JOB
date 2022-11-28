@@ -37,7 +37,6 @@
           <a href="./login" class="header-login"
             ><h4>Đăng Nhập</h4></a
           >
-          <a href="">Chào <?php echo $data;?></a>
           <div class="header-language">
             <span class="EN" n>EN</span>
             <span class="VI">VI</span>

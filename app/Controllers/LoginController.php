@@ -7,16 +7,22 @@ use App\View;
 use App\Service\UserService;
 
 class LoginController
-{
+{   
+    protected  UserService $userService;
+    public function __construct(){
+        $this->userService = new UserService();
+    }
     public function index(): View
     {
         
         return View::make('Login/index');
     }
     public function login(){
-        $user = (new UserService)->login($_POST['email'], $_POST['password']);
+        $user = $this->userService->login($_POST['email'], $_POST['password']);
         if ($user != null){
-            var_dump($user);
+            $_SESSION['user'] = $user->getName(); 
+           
+            header('Location: ./searchJob');
         }
         else{
             

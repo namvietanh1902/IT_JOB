@@ -12,6 +12,7 @@ class Router
     public function register(string $requestMethod, string $route, array $action): self
     {   
         $route = "/IT_JOB".$route;
+        
         $this->routes[$requestMethod][$route] = $action;
 
         return $this;
